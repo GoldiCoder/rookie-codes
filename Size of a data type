@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+int int_bit = 4;
+int char_bit = 1;
+int float_bit = 4;
+int double_bit = 8;
+
+string byte = "bytes";
+
+cout << "Size of int:"<< int_bit << byte<< endl;
+cout << "Size of char:"<< char_bit << byte<< endl;
+cout << "Size of float:"<< float_bit << byte<< endl;
+cout << "Size of double:"<< double_bit << byte<< endl;
+}
