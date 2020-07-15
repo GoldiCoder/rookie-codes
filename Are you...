@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+
+int main ()
+{
+int age; 
+int choice;
+
+// inputting age
+cout << "Konnichiwa! What is your current age?\n";
+cin >> age;
+
+// code if age = greater than / equal to 18
+if (age >= 18) {
+    cout << "You are eligible to vote\n\n";
+    //additional
+    cout << "Want to know when you will be voting next in India?" <<endl;
+    cout << "Enter 1 if you do.\nEnter 2 if you dont\n";
+    cin >> choice;
+    
+}
+    if (choice == 1){
+        cout << "You will vote next for Lok Sabha elections in the May of 2024";
+    }
+    else  {
+        cout << "Sayohnara! Have a fine day!";
+        exit (0);
+    }
+    
+    
+    //code if age is less than 18
+if (age < 18) {
+    cout << "Your are not eligible to vote\n\n";
+    
+    
+    // additional
+    cout << "Do you want to know in which year you will vote for your first time?\n";
+    cout << "Enter 1 if you do \nEnter 2 if you dont\n\n";
+    cin >> choice;
+    }
+   if (choice == 0 || choice == 2  ) {cout<< "Ciao Adios! Have a fine day!";} 
+     else{
+         switch (age){
+
+         case 1 :
+         { if (age >= 14) {cout << "You will vote in 2029";}}
+         break;
+         
+         default:
+         cout << "You will vote in the May of 2024";
+         }
+
+      return 0;
+         
+         }
+ 
+        
+
+}
