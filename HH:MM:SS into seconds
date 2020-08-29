@@ -1,0 +1,47 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+class Sec
+{
+    private : 
+        int hour;
+        int minute;
+        int second;
+        int seconds;
+    public:
+        void inval();
+        void outval();
+};
+
+void Sec :: inval () {
+// inputs value into resp. variables
+    cout << "Enter the time: \n"; 
+    cout << "Hours : \n";  cin >> hour;   
+    cout << "Minutes : \n";  cin >> minute;
+    cout << "Seconds : \n";  cin >> second;
+}
+
+
+void Sec :: outval(){
+// converts into seconds
+    seconds = hour * 3600 + minute * 60 + second;
+       //makes input into format of HH:MM:SS
+        cout << "The given time is : "  << setw (2)<< setfill ('0') << hour       //setw(2) sets the width of the variable to 2.
+                                    <<":"<< setw (2)<< setfill ('0') << minute    // setfill('0') sets the other remaining empty value if any to zero.
+                                    <<":"<< setw (2)<< setfill ('0') << second ;
+                                    
+    cout <<endl<< "Time in seconds: " << seconds;   
+}
+
+
+
+
+int main(){
+    
+         Sec s1;
+        s1.inval();
+        s1.outval();
+    
+return 0;
+}
